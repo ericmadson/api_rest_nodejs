@@ -6,15 +6,21 @@
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
-    "lint": "eslint src --ext .ts --fix"
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.5.7",
+    "@types/supertest": "^2.0.16",
+    "supertest": "^6.3.3",
+    "tsup": "^8.0.1",
     "tsx": "^3.12.7",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vitest": "^1.0.4"
   },
   "dependencies": {
     "@fastify/cookie": "^9.2.0",
